@@ -31,7 +31,7 @@ export class PangeaAuditCallbackHandler extends BaseTracer {
   }
 
   override async onLLMEnd(run: Run): Promise<void> {
-    if (!run.outputs || !run.outputs.generations) {
+    if (!run.outputs?.generations) {
       return;
     }
 
